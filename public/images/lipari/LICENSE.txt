@@ -1,0 +1,9 @@
+lipari.webp
+Based on: Aerial image of Lipari (view from the southwest).jpg
+Author: Carsten Steger
+Source: https://commons.wikimedia.org/wiki/File:Aerial_image_of_Lipari_(view_from_the_southwest).jpg
+License: Creative Commons Attribution-ShareAlike 4.0 International
+https://creativecommons.org/licenses/by-sa/4.0/
+Adaptation: resized to 3000 x 1200 and converted to WebP. Display crops, CSS saturation/contrast and a dark overlay are applied by the site.
+This photographic adaptation is distributed under CC BY-SA 4.0. No endorsement by the author is implied.
+No AI alterations.
