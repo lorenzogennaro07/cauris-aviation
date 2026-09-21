@@ -1,31 +1,34 @@
 "use client";
-import {useEffect} from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-export function JourneyMotion(){
- useEffect(()=>{
- const media=gsap.matchMedia();
- media.add("(prefers-reduced-motion: no-preference)",()=>{
- const flight=gsap.timeline({scrollTrigger:{trigger:".flight-sequence",start:"top top",end:"bottom bottom",scrub:.7}});
- flight.to(".hero-copy",{opacity:0,y:-25,duration:.18},0).to(".flight-caption",{opacity:0,duration:.15},0)
- .fromTo(".departure",{opacity:0},{opacity:1,duration:.16},.18)
- .to(".departure",{opacity:0,duration:.22},.48)
- .to(".departure .photo",{scale:1.08,yPercent:4,duration:.55,ease:"none"},.18)
- .to(".helicopter",{xPercent:-5,yPercent:-7,scale:.85,duration:1,ease:"none"},0)
- .to(".marine-photo",{scale:1.12,yPercent:3,duration:1,ease:"none"},0)
- .fromTo(".crossing-message",{opacity:0,y:24},{opacity:1,y:0,duration:.22},.73);
- const revealOrigin=()=>{const point=document.querySelector(".map-destination circle")!.getBoundingClientRect();const stage=document.querySelector(".destination-stage")!.getBoundingClientRect();const x=(point.left+point.width/2-stage.left)/stage.width*100,y=(point.top+point.height/2-stage.top)/stage.height*100;return "polygon("+(x-6)+"% "+(y-7)+"%,"+(x+6)+"% "+(y-7)+"%,"+(x+6)+"% "+(y+7)+"%,"+(x-6)+"% "+(y+7)+"%)";}; const route=gsap.timeline({scrollTrigger:{trigger:".destination-sequence",start:"top top",end:"bottom bottom",scrub:.65,invalidateOnRefresh:true}});
- route.fromTo(".route-line",{strokeDasharray:1,strokeDashoffset:1},{strokeDashoffset:0,duration:.4,ease:"none"},0)
- .fromTo(".map-islands,.map-destination",{opacity:0},{opacity:1,duration:.2},.2)
- .fromTo(".arrival-photo",{clipPath:revealOrigin,opacity:0},{opacity:1,duration:.08},.46)
- .to(".arrival-photo",{clipPath:"polygon(0% 0%,100% 0%,100% 100%,0% 100%)",duration:.45,ease:"power2.inOut"},.5)
- .to(".map-composition",{opacity:0,duration:.2},.58)
- .fromTo(".arrival-copy",{opacity:0,y:24},{opacity:1,y:0,duration:.17},.83);
- });
- const header=document.querySelector(".site-header"),onScroll=()=>header?.classList.toggle("scrolled",scrollY>64);
- window.addEventListener("scroll",onScroll,{passive:true});onScroll();
- return()=>{media.revert();window.removeEventListener("scroll",onScroll);};
- },[]);
- return null;
+export function JourneyMotion() {
+  useEffect(() => {
+    const media = gsap.matchMedia();
+    media.add({ motion: "(prefers-reduced-motion: no-preference)", mobile: "(max-width: 767px)" }, context => {
+      if (!context.conditions?.motion) return;
+      const mobile = context.conditions.mobile;
+      // Entry uses the image; scroll uses its wrapper, so the two never compete.
+      if (window.scrollY < 80) {
+        gsap.fromTo(".hero-aircraft img",
+          { xPercent: mobile ? -4 : -7, yPercent: 8, rotation: -3, rotationY: -9, scale: .94, transformPerspective: 1600 },
+          { xPercent: 0, yPercent: 0, rotation: 0, rotationY: 0, scale: 1, duration: 1.8, ease: "power2.out", clearProps: "transform" });
+      }
+      const timeline = gsap.timeline({ defaults: { ease: "sine.inOut" }, scrollTrigger: {
+        trigger: ".hero-sequence", start: "top top", end: "bottom bottom", scrub: 0.85,
+        invalidateOnRefresh: true,
+      }});
+      // A shallow presentation arc: CSS perspective on the photographic plane only.
+      timeline.fromTo(".hero-aircraft",
+        { xPercent: mobile ? -2 : -4, yPercent: 3, scale: .97, rotation: -3.5, rotationY: -11, rotationX: 3, transformPerspective: 1600 },
+        { xPercent: mobile ? 2 : 5, yPercent: -8, scale: 1.055, rotation: 3, rotationY: 7, rotationX: -2, duration: .6 }, 0)
+        .to(".hero-aircraft", { xPercent: mobile ? 3 : 8, yPercent: -2, scale: 1.015, rotation: .6, rotationY: 10, rotationX: 0, duration: .4 }, .6)
+        .to(".hero-wordmark", { xPercent: -1.5, yPercent: 7, duration: 1 }, 0)
+        .to(".hero-landscape", { scale: 1.04, xPercent: -.5, duration: 1 }, 0)
+        .to(".hero-progress span", { scaleX: 1, duration: 1, ease: "none" }, 0);
+    });
+    return () => media.revert();
+  }, []);
+  return null;
 }

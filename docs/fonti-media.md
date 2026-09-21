@@ -94,3 +94,80 @@ I candidati scartati non sono utilizzati nel sito; non viene presunta una licenz
 | D Lipari | Carsten Steger aerial southwest; Bernard Gagnon Marina Corta, LIpari.jpg (Commons); Razvan Horhat Lgz5kWBdu50 (Unsplash) | Veduta Steger più ampia e geografica; porti più turistici o meno adatti al reveal |
 | E Elicottero moderno | Mathurin NAPOLY Q3-Il9eUxNc; Henry Möllers Q_LMGDrwPWs; Stepan Konev sBj6InmgP44 (Unsplash) | Dettaglio NAPOLY: cockpit moderno senza modello dichiarato. Scartati soggetti militari o industriali |
 | F Aviation details | Bradley Pritchard Jones KKGXBOQATAo; Mathurin NAPOLY Q3-Il9eUxNc; Austin Neill 4pHcmcPsP8A (Unsplash) | NAPOLY più nitido dopo crop. Bradley scartato dopo prova visuale; Neill mostra Chicago |
+
+## Hero fotografica — revisione 21 settembre 2026
+
+Questa revisione sostituisce il precedente impiego del modello 3D e delle fotografie delle sezioni successive. La pagina corrente mostra esclusivamente navbar, Hero e crediti. Gli asset precedenti documentati sopra sono conservati ma non caricati dalla Hero.
+
+### Elicottero: G-GBMM
+- Autore: **Alec Wilson** (Flickr: Alec BHX/KKC / awilson154).
+- Titolo originale: **G-GBMM**. Agusta A109S Grand fotografato a Birmingham il 17 febbraio 2019, in volo a bassa quota. Aeromobile civile in livrea argento, interamente inquadrato; non una fotografia di un volo CAURIS.
+- Fonte originale: https://www.flickr.com/photos/76052339@N05/32185277147
+- Scheda e copia: https://commons.wikimedia.org/wiki/File:G-GBMM_(32185277147).jpg
+- Licenza: **Creative Commons Attribution-ShareAlike 2.0 Generic (CC BY-SA 2.0)**, https://creativecommons.org/licenses/by-sa/2.0/ . Verificata sia nel link di licenza della pagina originale Flickr sia nella scheda Commons; la scheda riporta anche la revisione della licenza Flickr del 4 settembre 2024.
+- La licenza autorizza esplicitamente uso commerciale, adattamento e redistribuzione. Richiede attribuzione, collegamento alla licenza, indicazione delle modifiche e condivisione dell'adattamento con la stessa licenza. Non è una licenza Editorial Only o Non-Commercial.
+- Originale: `public/images/hero/helicopter-original.jpg`, 2305 × 1031 px.
+- Adattamento: `public/images/hero/helicopter.webp`, 2050 × 745 px, **CC BY-SA 2.0**. Scontorno tradizionale con maschera tracciata, ritaglio dei soli margini e compressione WebP; nessuna generazione AI, nessuna sostituzione di parti dell'aeromobile. Il grading di visualizzazione CSS riduce leggermente saturazione e luminosità.
+- Procedura riproducibile: `scripts/prepare-hero.mjs` (maschera inclusa). Conservati rotore principale, coda e carrello. Nessun marchio CAURIS applicato all'aeromobile; registrazione e livrea originali preservate.
+- Attribuzione visibile: **G-GBMM — Alec Wilson · CC BY-SA 2.0 · Scontorno e ottimizzazione; adattamento sotto la stessa licenza.** Nel disclosure “Crediti fotografici”, fuori dalla Hero, con link alla fonte, licenza e file adattato. Nessuna affiliazione o proprietà della flotta implicata.
+
+### Sfondo: Sicilia ed Eolie dalla ISS
+- Autore/credito: **NASA / ISS Expedition 59**, archivio NASA/JSC Earth Science and Remote Sensing Unit. L'articolo non identifica il singolo membro dell'equipaggio.
+- Identificativo: **ISS059-E-99173 / iss059e099173**; titolo **Italy and its island of Sicily**.
+- Fonte: https://www.nasa.gov/image-article/italy-island-of-sicily/
+- Scheda archivio: https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS059&roll=E&frame=99173
+- Originale alta risoluzione: https://eol.jsc.nasa.gov/DatabaseImages/ESC/large/ISS059/ISS059-E-99173.JPG
+- Diritti: **pubblico dominio per il contenuto NASA**, secondo le condizioni NASA Images and Media: https://www.nasa.gov/nasa-brand-center/images-and-media/ . Riutilizzo commerciale consentito, senza implicare approvazione o affiliazione NASA; nessun logo NASA né persona riconoscibile utilizzata.
+- File originale locale: `public/images/hero/sicily-iss-original.jpg`.
+- File servito: `public/images/hero/sicily-aeolian.webp`, ritaglio geografico della fotografia reale verso Sicilia, costa nord e arco eoliano; ridimensionamento e WebP. Nessuna terra aggiunta, spostata o generata. Grading scuro navy realizzato con CSS, senza alterare la geometria geografica.
+- Attribuzione visibile: **NASA / ISS Expedition 59 — ISS059-E-99173 · Pubblico dominio / condizioni NASA · Ritaglio e ottimizzazione.**
+- Nota: l'articolo NASA contiene “2010” nella didascalia ma il riferimento è Expedition 59 (2019); il sito non riproduce quella data incoerente.
+
+### Composizione e marchio
+Le due fotografie costituiscono una composizione illustrativa, non la documentazione di un volo realmente effettuato in quel luogo. I livelli restano separati nel DOM: paesaggio → trattamento cromatico → testo CAURIS → fotografia scontornata → copy. Il file fotografico adattato mantiene la licenza CC BY-SA 2.0; non si attribuiscono alla licenza fotografica diritti sul marchio CAURIS.
+
+Il solo logo master utilizzato è `public/brand/cauris-logo.svg.svg`, invariato e non rinominato. SHA-256 verificato prima dell'intervento: `EDDEC656F9DF889E99DA271016A3509C88D575744EBA1C25C7AC973C165602A6`. Il riferimento precedente a `cauris-logo.svg` è superato dall'istruzione più recente del titolare.
+
+## Polish finale Hero — immagine fornita dal committente, 21 settembre 2026
+
+Questa revisione sostituisce completamente lo sfondo NASA nella Hero corrente.
+- Fonte: allegato dell'utente **Foto 1.jpg** (`1-Foto-1.jpg`), fornito con istruzione esplicita di utilizzarlo nel sito.
+- Copia permanente originale, byte per byte: `public/images/hero/cauris-sicilia-eolie-original.jpg`.
+- Copia PNG senza ulteriori perdite: `public/images/hero/cauris-sicilia-eolie-hero.png`, 1280 × 720 px. È il file locale utilizzato da Next Image; qualità di consegna 85 e dimensioni responsive. Nessuna generazione o alterazione dei soggetti o della geografia.
+- Inquadratura responsive tramite object-fit / object-position; leggibilità tramite overlay CSS navy, senza modifica del file.
+- Autore e licenza esterna non comunicati nell'allegato: non attribuire questo asset a NASA e non dichiararlo pubblico dominio o Creative Commons. Uso su istruzione del committente; provenienza e diritti non verificati indipendentemente. La natura fotografica e l'esattezza geografica non sono state certificate.
+- Credito sul sito: “Sfondo: immagine fornita da CAURIS”. La licenza CC BY-SA 2.0 dell'elicottero e relativa attribuzione restano invariate.
+- Logo master invariato; visualizzazione aumentata di circa il 30%, navbar conservata a 84 px desktop / 74 px mobile.
+- Motion 2D in due fasi: lieve salita e inclinazione, poi assestamento; parallax indipendente dei tre livelli. Nessun motion fuori dalla Hero, nessuna animazione con prefers-reduced-motion.
+
+## Milestone 3.5 — fotografie corporate e servizi (21 settembre 2026)
+
+Documentazione esclusivamente interna, non collegata nel sito pubblico. Le due nuove fotografie sono illustrative: non rappresentano una flotta CAURIS, non certificano dotazioni o disponibilità e non implicano endorsement del fotografo o dei costruttori.
+
+### Home / CAURIS — dettaglio cockpit civile
+- File utilizzato: `public/images/corporate/strumentazione-civile.webp`.
+- Originale conservato: `public/images/corporate/cockpit-originale.jpg` (6000 × 4000).
+- Fonte: Pexels, “Interior of Helicopter”, foto 15778607.
+- URL originale: https://www.pexels.com/photo/interior-of-helicopter-15778607/
+- File sorgente: https://images.pexels.com/photos/15778607/pexels-photo-15778607.jpeg
+- Autore: Luis Quintero (metadati originali: JIBARO).
+- Licenza: Pexels License, verificata https://www.pexels.com/license/ il 21 settembre 2026. Uso commerciale, web e modifica consentiti; attribuzione non obbligatoria. Vietati endorsement implicito, rivendita della foto inalterata e redistribuzione su piattaforme stock.
+- Acquisizione: 21 settembre 2026.
+- Scelta: ripresa ravvicinata dei comandi e degli strumenti di un elicottero civile, senza persone, marchi di operatori o allestimenti di soccorso visibili.
+- Modifiche: crop editoriale 2200 × 2500 px (origine x1850/y1250), ridimensionamento a 1500 px e compressione WebP; crop responsive CSS centrato sugli strumenti. Nessuna manipolazione del contenuto o del colore.
+- Uso AI: no; fotografia fornita come tale dalla fonte, nessuna generazione o modifica AI applicata.
+
+### /servizi — cabina executive
+- File utilizzato: `public/images/servizi/cabina-executive.webp`.
+- Originale conservato: `public/images/servizi/cabina-executive-originale.jpg`.
+- Fonte: Pexels, “Interior of a Luxurious Helicopter with Brown Leather Seats”, foto 17508699.
+- URL originale: https://www.pexels.com/photo/interior-of-a-luxurious-helicopter-with-brown-leather-seats-17508699/
+- File sorgente: https://images.pexels.com/photos/17508699/pexels-photo-17508699.jpeg
+- Autore: Joey Galang.
+- Licenza: Pexels License, verificata https://www.pexels.com/license/ il 21 settembre 2026. Uso commerciale, web e modifica consentiti; nessun obbligo di attribuzione pubblica. Restano i limiti contro endorsement implicito e rivendita/redistribuzione stock.
+- Acquisizione: 21 settembre 2026.
+- Scelta: cabina reale, sedute in pelle, cuffie e finestrini; illustra l'utilizzo del mezzo senza introdurre un altro elicottero protagonista.
+- Modifiche: ottimizzazione WebP fino a 1800 px, crop CSS desktop/mobile orientato alle sedute. Nessuna manipolazione del contenuto o del colore.
+- Uso AI: no; fotografia fornita come tale dalla fonte, nessuna generazione o modifica AI applicata.
+
+Le nuove immagini non richiedono crediti pubblici. Il credito preesistente dell'elicottero Hero (CC BY-SA 2.0) resta invariato in attesa della decisione sul conflitto tra Hero intoccabile e rimozione di tutte le attribuzioni pubbliche.
