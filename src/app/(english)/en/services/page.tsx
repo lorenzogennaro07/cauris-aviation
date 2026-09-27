@@ -1,15 +1,10 @@
 import Image from "next/image";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/i18n/metadata";
 import { Navigation } from "@/components/navigation";
 import { getDictionary } from "@/i18n/dictionaries";
 
 const description = "Helicopter services for private travel, hospitality and tailored requests.";
-export const metadata: Metadata = {
-  title: "Services | CAURIS AVIATION",
-  description,
-  robots: { index: false, follow: false },
-  openGraph: { title: "Services | CAURIS AVIATION", description, type: "website", locale: "en_GB" },
-};
+export const metadata = pageMetadata("en", "services");
 
 const services = [
   {
@@ -28,7 +23,7 @@ const services = [
 
 export default function ServicesPage() {
   return <>
-    <Navigation content={getDictionary("en")} locale="en" currentPage="services" />
+    <Navigation content={{ skip: getDictionary("en").skip }} locale="en" currentPage="services" />
     <main id="contenuto" className="services-page" tabIndex={-1}>
       <header className="services-opening">
         <div className="services-opening-copy">

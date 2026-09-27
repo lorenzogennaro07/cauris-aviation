@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/i18n/metadata";
 import { ContactPage } from "@/components/contact-page";
 
-export const metadata: Metadata = { title: "Contact | CAURIS AVIATION", description: "For information, enquiries and collaborations: info@caurisaviation.com. Catania, Sicily.", robots: { index: false, follow: false } };
+export const metadata = pageMetadata("en", "contact");
 
 export default function Page() { return <ContactPage locale="en" />; }

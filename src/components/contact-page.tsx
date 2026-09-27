@@ -6,7 +6,7 @@ import { Navigation } from "./navigation";
 export function ContactPage({ locale }: { locale: Locale }) {
   const it = locale === "it";
   return <>
-    <Navigation content={getDictionary(locale)} locale={locale} currentPage="contact" />
+    <Navigation content={{ skip: getDictionary(locale).skip }} locale={locale} currentPage="contact" />
     <main id="contenuto" className="contact-page" tabIndex={-1}>
       <div className="contact-intro">
       <h1>{it ? "Contatti" : "Contact"}</h1>

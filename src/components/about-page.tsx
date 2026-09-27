@@ -8,7 +8,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
   const c = about[locale];
   const paragraphs = (lines: string[]) => lines.map(line => <p key={line}>{line}</p>);
   return <>
-    <Navigation content={getDictionary(locale)} locale={locale} currentPage="about" />
+    <Navigation content={{ skip: getDictionary(locale).skip }} locale={locale} currentPage="about" />
     <main id="contenuto" className="about-page" tabIndex={-1}>
       <header className="about-opening">
         <div className="about-opening-photo"><Image src="/images/about/atterraggio.JPG" alt={c.alts[0]} fill sizes="100vw" quality={85} preload /></div>

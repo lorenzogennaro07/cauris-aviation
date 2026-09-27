@@ -6,7 +6,7 @@ import { HomeLink } from "./home-link";
 import type { SiteContent } from "@/content/types";
 import type { Locale } from "@/i18n/config";
 
-export function Navigation({ content: c, locale, currentPage = "home" }: { content: SiteContent; locale: Locale; currentPage?: "home" | "services" | "about" | "contact" }) {
+export function Navigation({ content: c, locale, currentPage = "home" }: { content: Pick<SiteContent, "skip">; locale: Locale; currentPage?: "home" | "services" | "about" | "contact" }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const header = useRef<HTMLElement>(null);
   const menuButton = useRef<HTMLButtonElement>(null);

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
+import { StructuredData } from "./structured-data";
 import { Navigation } from "./navigation";
 import { CorporateIntroduction } from "./corporate-introduction";
 
@@ -8,7 +9,8 @@ export function Journey({ locale }: { locale: Locale }) {
   const c = getDictionary(locale);
   const it = locale === "it";
   return <>
-    <Navigation content={c} locale={locale} />
+    <StructuredData />
+    <Navigation content={{ skip: c.skip }} locale={locale} />
     <main id="contenuto" tabIndex={-1}>
       <section className="hero" aria-labelledby="hero-title">
         {/* LOCKED: user-selected sfondo pagina iniziale.JPG; same source at every breakpoint. */}
