@@ -431,3 +431,49 @@ h1,p { margin:0; }
  .brand { width:154px; height:58px; margin-top:17px; }
  .brand img { height:141px; left:-10px; top:-40px; }
 }
+/* Desktop opening fills the viewport without changing the photograph. */
+@media(min-width:900px) {
+ .hero { display:flex; flex-direction:column; min-height:100svh; }
+ .hero-photo { flex-shrink:0; }
+ .hero-copy { flex:1; }
+ .brand { width:216px; height:81px; margin-left:8px; margin-top:14px; }
+ .brand img { height:198px; left:-14px; top:-55px; }
+}
+@media(min-width:360px) and (max-width:899px) {
+ .brand { width:180px; height:68px; margin-left:4px; margin-top:17px; }
+ .brand img { height:165px; left:-12px; top:-46px; }
+}
+/* Contact only: open two-column composition, with a compact accessible form. */
+.contact-page { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:8%; align-items:start; }
+.contact-intro>p { max-width:480px; font-size:clamp(17px,1.5vw,21px); line-height:1.6; }
+.contact-intro .contact-address { font-size:clamp(21px,2.2vw,32px); }
+.contact-form { min-width:0; }
+.contact-form fieldset { min-width:0; margin:0; padding:0; border:0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px 20px; }
+.contact-field { min-width:0; }
+.contact-field-wide { grid-column:1 / -1; }
+.contact-field label { display:block; margin-bottom:9px; font-size:14px; font-weight:500; }
+.contact-field label span { font-weight:400; }
+.contact-field input,.contact-field select,.contact-field textarea { display:block; width:100%; min-width:0; min-height:46px; border:1px solid #06152d55; border-radius:0; background:transparent; color:var(--navy); padding:11px 12px; font:inherit; font-size:16px; }
+.contact-field textarea { resize:vertical; }
+.contact-field :is(input,select,textarea):focus-visible,.contact-submit:focus-visible { outline:2px solid var(--emerald); outline-offset:3px; }
+.contact-field [aria-invalid="true"] { border-color:#a12c2c; }
+.contact-field-error { margin-top:6px; color:#a12c2c; font-size:14px; }
+.contact-submit { justify-self:start; grid-column:1 / -1; min-height:48px; padding:12px 26px; background:var(--emerald); color:var(--ivory); border:0; font:inherit; font-weight:500; cursor:pointer; }
+.contact-form fieldset:disabled { opacity:.7; }
+.contact-form fieldset:disabled .contact-submit { cursor:wait; }
+.contact-status { min-height:5.5em; padding-top:16px; font-size:15px; line-height:1.5; }
+.contact-sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; border:0; }
+@media(max-width:899px) {
+ .contact-page { grid-template-columns:minmax(0,1fr); gap:44px; }
+ .contact-intro .contact-address { font-size:clamp(21px,4vw,32px); }
+}
+@media(max-width:599px) {
+.contact-form fieldset { grid-template-columns:minmax(0,1fr); gap:20px; }
+}
+/* Compact logo only on internal pages; retain the existing header height. */
+.site-header:not(.site-header-home) .brand { width:177px; height:66px; align-self:center; margin-top:0; }
+.site-header:not(.site-header-home) .brand img { height:162px; width:auto; left:-11px; top:-45px; }
+@media(max-width:899px) {
+ .site-header:not(.site-header-home) .brand { width:154px; height:58px; }
+ .site-header:not(.site-header-home) .brand img { height:141px; left:-10px; top:-40px; }
+}
