@@ -48,7 +48,7 @@ h1,p { margin:0; }
 .site-footer { background:var(--navy); padding:48px 24px 40px; display:flex; flex-direction:column; align-items:center; gap:20px; }
 /* Footer-only alpha mask: exact ivory rendering, original SVG unchanged. */
 .footer-brand { position:relative; width:clamp(280px,27vw,340px); max-width:100%; aspect-ratio:861 / 320; overflow:hidden; }
-.footer-brand::before { content:""; position:absolute; left:-6.736%; top:-70%; width:130.43%; height:248.125%; background:var(--ivory); -webkit-mask:url("/brand/logo-cauris-bianco-sfondo-blu.svg.svg") center / 100% 100% no-repeat; mask:url("/brand/logo-cauris-bianco-sfondo-blu.svg.svg") center / 100% 100% no-repeat; mask-mode:alpha; }
+.footer-brand img { display:block; position:absolute; left:-6.736%; top:-70%; width:130.43%; height:auto; max-width:none; }
 .footer-contact { color:var(--ivory); text-align:center; }
 .footer-contact p { margin-bottom:6px; font-size:12px; line-height:1.6; }
 
@@ -416,3 +416,18 @@ h1,p { margin:0; }
 
 /* Home alone places the existing header directly over the locked photograph. */
 .site-header.site-header-home { position:absolute; top:0; left:0; width:100%; background:transparent; border-bottom:0; }
+
+/* Frame the supplied PNG’s transparent margins without transforms. */
+.nav-shell { height:90px; }
+.brand { width:204px; height:76px; align-self:start; margin-top:10px; }
+.brand img { height:186px; width:auto; left:-13px; top:-52px; }
+@media(max-width:899px) {
+ .nav-shell { height:86px; }
+ .brand { width:172px; height:65px; margin-top:13px; }
+ .brand img { height:158px; left:-12px; top:-44px; }
+}
+@media(max-width:359px) {
+ .nav-shell { column-gap:2px; padding-inline:4px; }
+ .brand { width:154px; height:58px; margin-top:17px; }
+ .brand img { height:141px; left:-10px; top:-40px; }
+}

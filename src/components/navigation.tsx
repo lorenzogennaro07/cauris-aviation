@@ -25,7 +25,7 @@ export function Navigation({ content: c, locale, currentPage = "home" }: { conte
     <a className="skip-link" href="#contenuto">{c.skip}</a>
     <div className="nav-shell">
       <Link className="brand" href="/" aria-label="CAURIS AVIATION">
-        <Image src="/brand/cauris-logo.svg.svg" alt="CAURIS AVIATION" width={1123} height={794} unoptimized preload />
+        <Image src="/brand/png-logo-nuovo-verde-e-blu.png" alt="CAURIS AVIATION" width={6250} height={4419} unoptimized preload />
       </Link>
       <nav className="languages" aria-label={it ? "Lingua" : "Language"}>
         <Link href={italianPath} lang="it" hrefLang="it" aria-current={it ? "page" : undefined}>IT</Link>
