@@ -171,3 +171,23 @@ Documentazione esclusivamente interna, non collegata nel sito pubblico. Le due n
 - Uso AI: no; fotografia fornita come tale dalla fonte, nessuna generazione o modifica AI applicata.
 
 Le nuove immagini non richiedono crediti pubblici. Il credito preesistente dell'elicottero Hero (CC BY-SA 2.0) resta invariato in attesa della decisione sul conflitto tra Hero intoccabile e rimozione di tutte le attribuzioni pubbliche.
+
+## Pass 1 — fotografie fornite dall’utente (27 settembre 2026)
+Copie integrali, originali invariati in `cauris foto/`; nessun intervento AI. Sostituiscono le fotografie precedenti nei tre blocchi correnti.
+- Hero: `hero-sicilia-isole-01.jpg.JPG` → `public/images/hero/sicilia-isole-01.jpg`.
+- Home / CAURIS: `interno.JPG` → `public/images/aviation/cockpit-dettaglio.jpg`.
+- Servizi: `elicottero interno 2.JPG` → `public/images/aviation/esperienza-cabina.jpg`.
+Nessuna fotografia aggiuntiva; nessun credito pubblico nei blocchi correnti.
+
+### Secondo refinement — selezione fotografica
+- Hero: `cauris foto/elicottero tramonto 1 lontano.JPG` → `public/images/hero/elicottero-mare-tramonto.jpg`.
+- Home / CAURIS: `cauris foto/elicottero alto eliche sorvola mare.JPG` → `public/images/aviation/rotore-fusoliera-mare.jpg`.
+Copie integrali fornite dall’utente; luogo dello scatto non verificato, nessuna attribuzione a voli o flotta CAURIS. Foto Servizi invariata.
+
+## Homepage definitiva — asset vincolati
+- Hero LOCKED: `cauris foto/sfondo pagina iniziale.JPG` → `public/images/hero/sfondo-pagina-iniziale.jpg`, copia integrale, unica sorgente desktop/mobile. Sostituire solo su nuova richiesta esplicita.
+- Corporate: `cauris foto/due elicotteri sorvolano.JPG` → `public/images/aviation/due-elicotteri-sorvolano.jpg`, copia integrale. Nessuna terza foto.
+- Instrument Sans locale: repository ufficiale Google Fonts, `ofl/instrumentsans`; licenza `public/fonts/InstrumentSans-OFL.txt`.
+
+### About — fotografie fornite dall’utente
+Copie integrali in `public/images/about/` da `cauris foto/`, stessi nomi: `elicottero vola tramonto.JPG`, `elicottero mare interno.JPG`, `eliche.JPG`, `cockpit vista mare.JPG`. Nessuna modifica agli originali. Fotografie illustrative, senza identificazione geografica verificata o attribuzione a voli CAURIS.

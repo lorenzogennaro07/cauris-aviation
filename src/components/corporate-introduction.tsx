@@ -9,7 +9,7 @@ const introduction = {
   },
   en: {
     title: ["Bringing places closer.", "Making travel simpler."],
-    description: "CAURIS develops helicopter connection solutions between Sicily and its smaller islands, designed to make travel more direct, faster and more flexible.",
+    description: "CAURIS develops helicopter connections between Sicily and its smaller islands to make travel faster, more direct and more flexible.",
     audience: "For private clients, hospitality and tailored requests.",
   },
 } satisfies Record<Locale, { title: string[]; description: string; audience: string }>;
@@ -28,7 +28,7 @@ export function CorporateIntroduction({ locale }: { locale: Locale }) {
           <p className="corporate-intro-audience">{copy.audience}</p>
         </div>
         <div className="corporate-intro-photo">
-          <Image src="/images/corporate/strumentazione-civile.webp" alt={locale === "it" ? "Dettaglio della strumentazione e dei comandi di un elicottero civile" : "Instrument panel and controls of a civilian helicopter"} fill sizes="(max-width: 767px) 86vw, 43vw" quality={85} />
+          <Image src="/images/aviation/due-elicotteri-sorvolano.jpg" alt={locale === "it" ? "Due elicotteri in volo sopra il mare" : "Two helicopters flying over the sea"} fill sizes="(max-width: 767px) 86vw, 43vw" quality={85} />
         </div>
       </div>
     </section>

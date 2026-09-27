@@ -36,7 +36,7 @@ export default function ServicesPage() {
           <p>{description}</p>
         </div>
         <div className="services-photo">
-          <Image src="/images/servizi/cabina-executive.webp" alt="Sedute in pelle e grandi finestrini nella cabina di un elicottero executive" fill loading="eager" sizes="(max-width: 767px) 86vw, 43vw" quality={85} />
+          <Image src="/images/aviation/esperienza-cabina.jpg" alt="Vista dalla cabina di un elicottero, con un passeggero e il paesaggio oltre il finestrino" fill loading="eager" sizes="(max-width: 767px) 86vw, 43vw" quality={85} />
         </div>
       </header>
       <div className="services-list">
