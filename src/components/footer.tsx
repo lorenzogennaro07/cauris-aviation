@@ -14,7 +14,7 @@ export function Footer({ locale }: { locale: Locale }) {
       </div>
       <nav className="footer-navigation" aria-label={it ? "Navigazione footer" : "Footer navigation"}>
         <HomeLink />
-        <Link href="/servizi" hrefLang="it" aria-label={it ? undefined : "Services (in Italian)"}>{it ? "Servizi" : "Services"}</Link>
+        <Link href={it ? "/servizi" : "/en/services"} hrefLang={locale}>{it ? "Servizi" : "Services"}</Link>
         <Link href={it ? "/about" : "/en/about"}>About</Link>
         <Link href={it ? "/contatti" : "/en/contact"}>{it ? "Contatti" : "Contact"}</Link>
       </nav>

@@ -21,7 +21,7 @@ export function CorporateIntroduction({ locale }: { locale: Locale }) {
       <div className="corporate-intro-inner">
         <div className="corporate-intro-heading">
           <p className="corporate-intro-label">CAURIS AVIATION</p>
-          <h2 id="corporate-title">{copy.title.map(line => <span key={line}>{line}</span>)}</h2>
+          <h2 id="corporate-title">{copy.title.map(line => <span key={line}>{line}{" "}</span>)}</h2>
         </div>
         <div className="corporate-intro-copy">
           <p>{copy.description}</p>

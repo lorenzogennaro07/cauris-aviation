@@ -330,7 +330,7 @@ h1,p { margin:0; }
 .about-page h2 span,.about-thought span,.about-island-names span,.about-last span { display:block; }
 .about-shell { width:89%; max-width:1400px; margin-inline:auto; }
 .about-opening-photo { position:relative; height:clamp(340px,48vw,570px); }
-.about-opening-photo img { object-fit:cover; object-position:50% 28%; }
+.about-opening-photo img { object-fit:cover; object-position:50% 65%; }
 .about-opening-text { width:89%; max-width:1400px; margin:auto; padding:58px 0 74px; }
 .about-label { color:var(--emerald); font-size:12px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; margin-bottom:24px; }
 .about-opening h1 { max-width:1100px; font-size:clamp(36px,4.6vw,68px); }
@@ -343,7 +343,7 @@ h1,p { margin:0; }
 .about-prose p { font-size:clamp(17px,1.35vw,20px); line-height:1.7; }
 .about-prose p+p { margin-top:18px; }
 .about-sea { padding:32px 0 84px; }
-.about-sea .about-prose { margin-left:20%; }
+.about-sea .about-prose { margin-left:0; }
 .about-question { max-width:990px; font-size:clamp(32px,4.2vw,60px); line-height:1.18; letter-spacing:-.035em; margin-top:48px; color:var(--emerald); text-wrap:balance; }
 .about-wide-photo { position:relative; height:clamp(300px,40vw,540px); }
 .about-wide-photo img { object-fit:cover; object-position:50% 42%; }
@@ -370,7 +370,7 @@ h1,p { margin:0; }
 @media(max-width:767px) {
  .about-shell,.about-opening-text,.contact-page { width:86%; }
  .about-opening-photo { height:330px; }
- .about-opening-photo img { object-position:54% 35%; }
+ .about-opening-photo img { object-position:30% 58%; }
  .about-opening-text { padding:34px 0 42px; }
  .about-label { margin-bottom:20px; }
  .about-introduction { margin-top:24px; }
@@ -413,3 +413,6 @@ h1,p { margin:0; }
  .about-prose .about-island-names { margin:26px 0 24px; }
  .about-closing { padding-block:40px 48px; }
 }
+
+/* Home alone places the existing header directly over the locked photograph. */
+.site-header.site-header-home { position:absolute; top:0; left:0; width:100%; background:transparent; border-bottom:0; }

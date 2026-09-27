@@ -11,7 +11,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
     <Navigation content={getDictionary(locale)} locale={locale} currentPage="about" />
     <main id="contenuto" className="about-page" tabIndex={-1}>
       <header className="about-opening">
-        <div className="about-opening-photo"><Image src="/images/about/elicottero vola tramonto.JPG" alt={c.alts[0]} fill sizes="100vw" quality={85} preload /></div>
+        <div className="about-opening-photo"><Image src="/images/about/atterraggio.JPG" alt={c.alts[0]} fill sizes="100vw" quality={85} preload /></div>
         <div className="about-opening-text">
           <p className="about-label">About</p>
           <h1>{c.opening}</h1>
@@ -21,7 +21,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
       <section className="about-distance about-shell" aria-labelledby="about-distance-title">
         <div className="about-distance-photo"><Image src="/images/about/elicottero mare interno.JPG" alt={c.alts[1]} fill sizes="(max-width: 767px) 86vw, 34vw" quality={85} /></div>
         <div className="about-prose">
-          <h2 id="about-distance-title">{c.distanceTitle.map(line => <span key={line}>{line}</span>)}</h2>
+          <h2 id="about-distance-title">{c.distanceTitle.map(line => <span key={line}>{line}{" "}</span>)}</h2>
           {paragraphs(c.distance)}
         </div>
       </section>
@@ -39,14 +39,14 @@ export function AboutPage({ locale }: { locale: Locale }) {
         <div className="about-shell about-islands-inner">
           <div className="about-prose">
             <h2 id="about-islands-title">{c.islandsTitle}</h2>
-            <p className="about-island-names"><span>Lipari.</span><span>Pantelleria.</span></p>
+            <p className="about-island-names"><span>Lipari.</span>{" "}<span>Pantelleria.</span></p>
             {paragraphs(c.islands)}
           </div>
           <div className="about-islands-photo"><Image src="/images/about/cockpit vista mare.JPG" alt={c.alts[3]} fill sizes="(max-width: 767px) 86vw, 40vw" quality={85} /></div>
         </div>
       </section>
       <section className="about-closing about-shell" aria-labelledby="about-closing-title">
-        <h2 id="about-closing-title">{c.closingTitle.map(line => <span key={line}>{line}</span>)}</h2>
+        <h2 id="about-closing-title">{c.closingTitle.map(line => <span key={line}>{line}{" "}</span>)}</h2>
         <p>{c.closing}</p>
         <p className="about-last">{c.last.join(" ")}</p>
       </section>
